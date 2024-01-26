@@ -1,19 +1,19 @@
 package com.house;
 
-public class ApartmentFactory implements HouseFactory {
+public class VillaFactory implements HouseFactory {
 
 	@Override
 	public Livingroom createLivingroom() {
-		return new ApartmentLivingroom();
+		return new VillaLivingroom();
 	}
 
 	@Override
 	public Kitchen createKitchen() {
-		return new ApartmentKitchen();
+		return new VillaKitchen();
 	}
 
 	@Override
 	public Bedroom createBedroom() {
-		return new ApartmentBedroom();
+		return new VillaBedroom();
 	}
 }

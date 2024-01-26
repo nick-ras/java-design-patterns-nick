@@ -2,24 +2,23 @@ package com.house;
 
 import lombok.Getter;
 import lombok.Setter;
-import com.house.TownHouseFactory;
 
 @Getter
 @Setter
 public class House {
-	private String livingroom;
-	private String kitchen;
-	private String bedroom;
+	private Livingroom livingroom;
+	private Kitchen kitchen;
+	private Bedroom bedroom;
 
 	public static class FactoryMaker {
 		public enum HouseType {
-			Townhouse, Apartment
+			Townhouse, Villa
 		}
 
 		public static HouseFactory makeFactory(HouseType type) {
 			return switch (type) {
 				case Townhouse -> new TownHouseFactory();
-				case Apartment -> new ApartmentFactory();
+				case Villa -> new VillaFactory();
 				default -> throw new IllegalArgumentException("HouseType not supported.");
 			};
 		}

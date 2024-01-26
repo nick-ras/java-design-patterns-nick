@@ -7,9 +7,9 @@
 	<version>1.0-SNAPSHOT</version>
 
 	<properties>
-		<maven.compiler.source>21</maven.compiler.source>		<!-- Set your Java version -->
-		<maven.compiler.target>21</maven.compiler.target>		<!-- Set your Java version -->
-		<lombok.version>1.18.20</lombok.version>		<!-- Use the latest Lombok version -->
+		<maven.compiler.source>17</maven.compiler.source>
+		<maven.compiler.target>17</maven.compiler.target>
+		<lombok.version>1.18.22</lombok.version>		<!-- Use the latest Lombok version -->
 	</properties>
 
 	<dependencies>

@@ -1,12 +1,9 @@
 package com.house;
 
-//javac src/main/App.java && java -cp src main.App
-//clean the Java language server workspace?
-import lombok.extern.slf4j.Slf4j;
+//mvn clean install && java -jar target/abstract-factory-1.0-SNAPSHOT.jar 
 
 // package main;
 
-@Slf4j
 public class App implements Runnable {
 
 	private final House house = new House();
@@ -24,8 +21,8 @@ public class App implements Runnable {
 	@Override
 	public void run() {
 		System.out.println("running App class");
-		log.info("making house");
 		createHouse(House.FactoryMaker.HouseType.Townhouse);
+		createHouse(House.FactoryMaker.HouseType.Villa);
 		// log.info(createHouse.getLivingroom().getDescription());
 	}
 
@@ -34,6 +31,8 @@ public class App implements Runnable {
 		house.setLivingroom(houseFactory.createLivingroom());
 		house.setKitchen(houseFactory.createKitchen());
 		house.setBedroom(houseFactory.createBedroom());
+		System.out.println(house.getLivingroom().getDescription());
+		System.out.println(house.getKitchen().getDescription());
 	}
 
 	public void say_hello() {

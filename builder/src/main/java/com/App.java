@@ -8,7 +8,7 @@ public class App {
 
 	public static void main(String[] args) {
 		System.out.println("Hello World!");
-		var car = new Car.Builder(Model.Corolla, 1999).price(1000).build();
+		var car = new Car.Builder(Model.ToyateCorolla, 1999).price(1000).build();
 		System.out.println(car);
 	}
 

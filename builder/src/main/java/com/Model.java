@@ -1,7 +1,7 @@
 package com;
 
 public enum Model {
-	Corolla, Golf, Partner, None;
+	ToyateCorolla, VolkswagenGolf, PeugeotPartner, None;
 
 	@Override
 	public String toString() {

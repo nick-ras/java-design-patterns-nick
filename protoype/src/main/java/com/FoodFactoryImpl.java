@@ -1,20 +1,17 @@
 package com;
 
-import lombok.RequiredArgsConstructor;
-
-@RequiredArgsConstructor
 public class FoodFactoryImpl implements FoodFactory {
 
-	private final FoodBox foodbox;
+	private final Foodbox foodbox;
 	private final Plate plate;
 
-	// public FoodFactoryImpl(FoodBox foodbox, Plate plate) {
-	// this.foodbox = foodFactoryImpl.foodbox;
-	// this.plate = foodFactoryImpl.plate;
-	// }
+	public FoodFactoryImpl(Foodbox foodbox, Plate plate) {
+		this.foodbox = foodbox;
+		this.plate = plate;
+	}
 
 	@Override
-	public FoodBox createFoodbox() {
+	public Foodbox createFoodbox() {
 		return foodbox.copy();
 	}
 

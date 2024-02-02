@@ -1,9 +1,11 @@
 package com;
 
+import lombok.EqualsAndHashCode;
 import lombok.RequiredArgsConstructor;
 
 @RequiredArgsConstructor
-public class MexicanFoodbox extends FoodBox {
+@EqualsAndHashCode(callSuper = true)
+public class MexicanFoodbox extends Foodbox {
 
 	private final String dressing;
 

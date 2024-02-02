@@ -3,7 +3,7 @@ package com;
 import lombok.RequiredArgsConstructor;
 
 @RequiredArgsConstructor
-public class FrenchFoodbox extends FoodBox {
+public class FrenchFoodbox extends Foodbox {
 
 	private final String dressing;
 

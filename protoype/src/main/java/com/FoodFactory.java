@@ -1,7 +1,8 @@
 package com;
 
 public interface FoodFactory {
-	FoodBox createFoodbox();
+
+	Foodbox createFoodbox();
 
 	Plate createPlate();
 }

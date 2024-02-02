@@ -6,6 +6,8 @@ package com.house;
 
 public class App implements Runnable {
 
+	// either villa og townhouse factory created here, of which townhouse kitche,
+	// livingroom and bedroom are created
 	private final House house = new House();
 
 	public House getHouse() {
@@ -26,13 +28,17 @@ public class App implements Runnable {
 		// log.info(createHouse.getLivingroom().getDescription());
 	}
 
+	// Factorymaker is a subclass of house
 	public void createHouse(final House.FactoryMaker.HouseType type) {
+
 		final HouseFactory houseFactory = House.FactoryMaker.makeFactory(type);
+
 		house.setLivingroom(houseFactory.createLivingroom());
 		house.setKitchen(houseFactory.createKitchen());
 		house.setBedroom(houseFactory.createBedroom());
 		System.out.println(house.getLivingroom().getDescription());
 		System.out.println(house.getKitchen().getDescription());
+		System.out.println(house.getBedroom().getDescription());
 	}
 
 	public void say_hello() {

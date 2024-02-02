@@ -15,6 +15,9 @@ public class House {
 			Townhouse, Villa
 		}
 
+		/**
+		 * makes a factory based on the house type
+		 */
 		public static HouseFactory makeFactory(HouseType type) {
 			return switch (type) {
 				case Townhouse -> new TownHouseFactory();

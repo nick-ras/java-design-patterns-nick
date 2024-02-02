@@ -1,9 +1,14 @@
 package com;
 
-public class UniversityCourse implements University {
+import lombok.AllArgsConstructor;
 
-	public void startMath() {
-		System.out.println("Inner state");
+@AllArgsConstructor
+public class UniversityCourse implements UniversitySubject {
+
+	private UniversitySubject subject;
+
+	public void startSubject() {
+		subject.startSubject();
 	}
 
 }

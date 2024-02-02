@@ -7,11 +7,14 @@ public class App {
 
 	public static void main(String[] args) {
 		System.out.println("Hello World!");
-		var innerstate = new UniversityCourse();
-		innerstate.startMath();
 
-		var outerstate = new UniversityExchange(new OuterStateUniversity());
-		outerstate.startMath();
+		var subjectMath = new UniversityCourse(new SubjectChooser(SubjectList.Subject.MATH));
+
+		subjectMath.startSubject();
+
+		var subjectHistory = new UniversityCourse(new SubjectChooser(SubjectList.Subject.HISTORY));
+
+		subjectHistory.startSubject();
 
 	}
 

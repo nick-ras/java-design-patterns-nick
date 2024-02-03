@@ -3,7 +3,7 @@
 
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>main</groupId>	<!-- Change to your group id -->
-	<artifactId>builder</artifactId>	<!-- Change to your artifact id -->
+	<artifactId>prototype</artifactId>	<!-- Change to your artifact id -->
 	<version>1.0-SNAPSHOT</version>
 
 	<properties>
